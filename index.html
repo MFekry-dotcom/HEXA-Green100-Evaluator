@@ -316,3 +316,110 @@
   }
 </script></body>
 </html>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEXA Green Evaluator</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .left-section {
+      width: 55%;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-right: 1px solid #ccc;
+      overflow-y: scroll;
+      height: 100vh;
+    }
+    .right-section {
+      width: 45%;
+      padding: 20px;
+      background-color: #fff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    th {
+      background-color: #eeeeee;
+    }
+    th:nth-child(3) {
+      background-color: #e8f5e9;
+    }
+    th:nth-child(4) {
+      background-color: #ffebee;
+    }
+    h3 {
+      color: #2E7D32;
+      margin-top: 40px;
+    }
+    .result-box {
+      margin-top: 20px;
+      padding: 20px;
+      border: 2px solid #2E7D32;
+      border-radius: 10px;
+      background-color: #f1f8e9;
+    }
+  </style>
+</head>
+<body>
+  <div class="left-section">
+    <!-- Insert full 100-parameter table here using repeated <table> blocks for each 20-parameter domain -->
+    <!-- Use same pattern from Environmental Impact and complete Method Efficiency, Operator Safety, Toxicity & Sustainability, and Economic/Scalability -->
+    <!-- Each table contains 20 rows with parameter details, 0/1 inputs, and correct styling -->
+    <h3 style="color:#2E7D32;">4. Safety, Toxicity and Instrumental Sustainability</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Parameter</th>
+          <th>Score = 1 (Not Toxic & Sustainable)</th>
+          <th>Score = 0 (Toxic & Not Sustainable)</th>
+          <th>Your Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>61</td><td>Acute toxicity</td><td>LD₅₀ > 2000 mg/kg</td><td>LD₅₀ ≤ 2000 mg/kg</td><td><input type="radio" name="param61" value="1"> 1 <input type="radio" name="param61" value="0"> 0</td></tr>
+        <tr><td>62</td><td>Chronic toxicity</td><td>No known chronic effects</td><td>Known chronic health hazards</td><td><input type="radio" name="param62" value="1"> 1 <input type="radio" name="param62" value="0"> 0</td></tr>
+        <tr><td>63</td><td>Carcinogenicity</td><td>Not classified or category 4–5</td><td>Category 1A/1B/2 known/suspected</td><td><input type="radio" name="param63" value="1"> 1 <input type="radio" name="param63" value="0"> 0</td></tr>
+        <tr><td>64</td><td>Occupational hazards</td><td>Minimal (dust/fume negligible)</td><td>Significant hazards (VOCs, aerosols)</td><td><input type="radio" name="param64" value="1"> 1 <input type="radio" name="param64" value="0"> 0</td></tr>
+        <tr><td>65</td><td>Health hazards</td><td>No risk of absorption or toxicity</td><td>Dermal, inhalation, ingestion risks</td><td><input type="radio" name="param65" value="1"> 1 <input type="radio" name="param65" value="0"> 0</td></tr>
+        <tr><td>66</td><td>Safety hazards</td><td>Low hazard operation protocol</td><td>Explosion or high-energy systems</td><td><input type="radio" name="param66" value="1"> 1 <input type="radio" name="param66" value="0"> 0</td></tr>
+        <tr><td>67</td><td>Risk of hazard interactions</td><td>No reactive/synergistic compounds</td><td>Unexpected mixtures present</td><td><input type="radio" name="param67" value="1"> 1 <input type="radio" name="param67" value="0"> 0</td></tr>
+        <tr><td>68</td><td>Availability of MSDS</td><td>MSDS available & updated</td><td>MSDS missing or outdated</td><td><input type="radio" name="param68" value="1"> 1 <input type="radio" name="param68" value="0"> 0</td></tr>
+        <tr><td>69</td><td>Use of banned substances</td><td>None used</td><td>Any banned/restricted used</td><td><input type="radio" name="param69" value="1"> 1 <input type="radio" name="param69" value="0"> 0</td></tr>
+        <tr><td>70</td><td>Direct exposure to analyst</td><td>Closed/transferred sampling</td><td>Open sampling or contact likely</td><td><input type="radio" name="param70" value="1"> 1 <input type="radio" name="param70" value="0"> 0</td></tr>
+        <tr><td>71</td><td>Instrument eco-certification</td><td>Certified sustainable production</td><td>No certification available</td><td><input type="radio" name="param71" value="1"> 1 <input type="radio" name="param71" value="0"> 0</td></tr>
+        <tr><td>72</td><td>Carbon footprint data</td><td>Life cycle or CO₂ data available</td><td>No CO₂ impact data</td><td><input type="radio" name="param72" value="1"> 1 <input type="radio" name="param72" value="0"> 0</td></tr>
+        <tr><td>73</td><td>Toxic by-products</td><td>No toxic side-products present</td><td>Hazardous by-products exist</td><td><input type="radio" name="param73" value="1"> 1 <input type="radio" name="param73" value="0"> 0</td></tr>
+        <tr><td>74</td><td>Maintenance-free period</td><td>≥ 6 months no intervention</td><td>Frequent failure/maintenance</td><td><input type="radio" name="param74" value="1"> 1 <input type="radio" name="param74" value="0"> 0</td></tr>
+        <tr><td>75</td><td>Post-analysis cleanup</td><td>Minimal or solvent-free</td><td>Complex hazardous cleanup</td><td><input type="radio" name="param75" value="1"> 1 <input type="radio" name="param75" value="0"> 0</td></tr>
+        <tr><td>76</td><td>Remote support & diagnostics</td><td>Available</td><td>Unavailable</td><td><input type="radio" name="param76" value="1"> 1 <input type="radio" name="param76" value="0"> 0</td></tr>
+        <tr><td>77</td><td>PPE requirement</td><td>Basic PPE sufficient</td><td>Full PPE required</td><td><input type="radio" name="param77" value="1"> 1 <input type="radio" name="param77" value="0"> 0</td></tr>
+        <tr><td>78</td><td>Aquatic toxicity</td><td>No aquatic hazard</td><td>Known or unknown aquatic risk</td><td><input type="radio" name="param78" value="1"> 1 <input type="radio" name="param78" value="0"> 0</td></tr>
+        <tr><td>79</td><td>Dermal toxicity</td><td>Non-irritant/sensitizer</td><td>Irritant or corrosive</td><td><input type="radio" name="param79" value="1"> 1 <input type="radio" name="param79" value="0"> 0</td></tr>
+        <tr><td>80</td><td>Neurotoxicity</td><td>No neurotoxic effect</td><td>Suspected neurotoxin present</td><td><input type="radio" name="param80" value="1"> 1 <input type="radio" name="param80" value="0"> 0</td></tr>
+      </tbody>
+    </table>
+  </div>  <div class="right-section">
+    <div class="result-box">
+      <h2>Greenness Evaluation Result</h2>
+      <p><strong>Binary String:</strong> [Generated]</p>
+      <p><strong>Hexadecimal Code:</strong> [Generated]</p>
+      <p><strong>Greenness %:</strong> [Calculated]</p>
+      <p><strong>Barcode:</strong> [Auto-Generated]</p>
+      <!-- Insert script here in future for calculation and visualizations -->
+    </div>
+  </div>
+</body>
+</html>
