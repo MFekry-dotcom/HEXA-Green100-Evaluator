@@ -1,318 +1,165 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>HEXA Green Evaluator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      flex-direction: row;
-      background-color: #f5f5f5;
+      height: 100vh;
     }
-    .left-panel {
-      width: 55%;
+    .left, .right {
       padding: 20px;
-      background-color: #ffffff;
       overflow-y: auto;
-      height: 100vh;
     }
-    .right-panel {
-      width: 45%;
-      padding: 20px;
-      background-color: #f0f4c3;
-      height: 100vh;
+    .left {
+      width: 50%;
+      background-color: #f9f9f9;
+      border-right: 2px solid #ccc;
     }
-    h3 {
-      color: #2E7D32;
+    .right {
+      width: 50%;
+      background-color: #ffffff;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 30px;
+      margin-top: 10px;
     }
     th, td {
       border: 1px solid #ccc;
       padding: 8px;
+      font-size: 14px;
     }
-    thead {
-      background-color: #eeeeee;
+    th {
+      background-color: #e0f7fa;
     }
-    .green-cell {
-      background-color: #e8f5e9;
-    }
-    .red-cell {
-      background-color: #ffebee;
-    }
-    .result-box {
-      background-color: #ffffff;
-      border: 2px solid #2E7D32;
-      padding: 20px;
+    .section-title {
+      color: #2E7D32;
+      font-size: 18px;
       margin-top: 20px;
     }
   </style>
 </head>
 <body>
-<div class="left-panel">
-  <!-- Section 2: Method Efficiency -->
-  <h3>2. Method Efficiency</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Parameter</th>
-        <th class="green-cell">Score = 1 (Efficient)</th>
-        <th class="red-cell">Score = 0 (Inefficient)</th>
-        <th>Your Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>21</td><td>Analysis time</td><td>≤ 15 min/sample</td><td>> 15 min/sample</td><td><input type="radio" name="param21" value="1">1 <input type="radio" name="param21" value="0">0</td></tr>
-      <tr><td>22</td><td>Throughput</td><td>≥ 30 samples/day</td><td>< 30 samples/day</td><td><input type="radio" name="param22" value="1">1 <input type="radio" name="param22" value="0">0</td></tr>
-      <tr><td>23</td><td>Sample preparation steps</td><td>≤ 2 steps</td><td>> 2 steps</td><td><input type="radio" name="param23" value="1">1 <input type="radio" name="param23" value="0">0</td></tr>
-      <tr><td>24</td><td>Derivatization required</td><td>No</td><td>Yes</td><td><input type="radio" name="param24" value="1">1 <input type="radio" name="param24" value="0">0</td></tr>
-      <tr><td>25</td><td>Sample transfer steps</td><td>≤ 2 transfers</td><td>> 2 transfers</td><td><input type="radio" name="param25" value="1">1 <input type="radio" name="param25" value="0">0</td></tr>
-      <tr><td>26</td><td>Use of advanced instrumentation</td><td>Yes</td><td>No</td><td><input type="radio" name="param26" value="1">1 <input type="radio" name="param26" value="0">0</td></tr>
-      <tr><td>27</td><td>In-line or at-line analysis</td><td>Yes</td><td>No</td><td><input type="radio" name="param27" value="1">1 <input type="radio" name="param27" value="0">0</td></tr>
-      <tr><td>28</td><td>Miniaturization of method</td><td>Yes</td><td>No</td><td><input type="radio" name="param28" value="1">1 <input type="radio" name="param28" value="0">0</td></tr>
-      <tr><td>29</td><td>Method portability</td><td>Portable</td><td>Non-portable</td><td><input type="radio" name="param29" value="1">1 <input type="radio" name="param29" value="0">0</td></tr>
-      <tr><td>30</td><td>No. of analytes per run</td><td>≥ 2</td><td>1</td><td><input type="radio" name="param30" value="1">1 <input type="radio" name="param30" value="0">0</td></tr>
-      <tr><td>31–40</td><td colspan="4">(Add remaining parameters 31–40 here using the same format)</td></tr>
-    </tbody>
-  </table>  <!-- Section 3: Operator Safety -->  <h3>3. Operator Safety</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Parameter</th>
-        <th class="green-cell">Score = 1 (Safe)</th>
-        <th class="red-cell">Score = 0 (Unsafe)</th>
-        <th>Your Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>41–60</td><td colspan="4">(Add parameters 41–60 here)</td></tr>
-    </tbody>
-  </table>  <!-- Section 4: Toxicity and Sustainability -->  <h3>4. Toxicity and Instrumental Sustainability</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Parameter</th>
-        <th class="green-cell">Score = 1 (Not Toxic & Sustainable)</th>
-        <th class="red-cell">Score = 0 (Toxic & Not Sustainable)</th>
-        <th>Your Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>61–80</td><td colspan="4">(Add parameters 61–80 here)</td></tr>
-    </tbody>
-  </table>  <!-- Section 5: Economic & Scalability -->  <h3>5. Economic Viability and Scalability</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Parameter</th>
-        <th class="green-cell">Score = 1 (Meets Standards)</th>
-        <th class="red-cell">Score = 0 (Fails Standards)</th>
-        <th>Your Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>81–100</td><td colspan="4">(Add parameters 81–100 here)</td></tr>
-    </tbody>
-  </table>
-</div><div class="right-panel">
-  <div class="result-box">
-    <h3>HEXA Code & Greenness %</h3>
-    <p><strong>HEXA Code:</strong> <span id="hexOutput">--</span></p>
-    <p><strong>Greenness %:</strong> <span id="greenPercent">--%</span></p>
-    <p><strong>Barcode:</strong></p>
-    <svg id="barcode"></svg>
-    <button onclick="calculateGreenness()">Generate HEXA Code</button>
+  <div class="left">
+    <h2>HEXA Green Evaluation Form</h2>
+    <div id="parameter-tables"></div>
+    <button onclick="calculateResults()">Calculate HEX Code & Greenness %</button>
   </div>
-</div><script src="https://cdn.jsdelivr.net/jsbarcode/3.11.5/JsBarcode.all.min.js"></script><script>
-  function calculateGreenness() {
-    let binary = '';
-    for (let i = 1; i <= 100; i++) {
-      let radios = document.getElementsByName('param' + i);
-      for (let radio of radios) {
-        if (radio.checked) binary += radio.value;
-      }
-    }
-    let hex = '';
-    let ones = 0;
-    for (let i = 0; i < binary.length; i += 4) {
-      let chunk = binary.substr(i, 4);
-      if (chunk.length < 4) chunk = chunk.padEnd(4, '0');
-      ones += [...chunk].filter(v => v === '1').length;
-      hex += parseInt(chunk, 2).toString(16).toUpperCase();
-    }
-    let percent = (ones / 100) * 100;
-    document.getElementById('hexOutput').innerText = hex.padEnd(25, '0');
-    document.getElementById('greenPercent').innerText = percent.toFixed(1) + '%';
-    JsBarcode("#barcode", hex.padEnd(25, '0'));
-  }
-</script></body>
-</html>
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>HEXA Green Evaluator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: row;
-      background-color: #f5f5f5;
-    }
-    .left-panel {
-      width: 55%;
-      padding: 20px;
-      background-color: #ffffff;
-      overflow-y: auto;
-      height: 100vh;
-    }
-    .right-panel {
-      width: 45%;
-      padding: 20px;
-      background-color: #f0f4c3;
-      height: 100vh;
-    }
-    h3 {
-      color: #2E7D32;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 30px;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-    }
-    thead {
-      background-color: #eeeeee;
-    }
-    .green-cell {
-      background-color: #e8f5e9;
-    }
-    .red-cell {
-      background-color: #ffebee;
-    }
-    .result-box {
-      background-color: #ffffff;
-      border: 2px solid #2E7D32;
-      padding: 20px;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-<div class="left-panel">
-  <!-- Section 2: Method Efficiency -->
-  <h3>2. Method Efficiency</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Parameter</th>
-        <th class="green-cell">Score = 1 (Efficient)</th>
-        <th class="red-cell">Score = 0 (Inefficient)</th>
-        <th>Your Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>21</td><td>Analysis time</td><td>≤ 15 min/sample</td><td>> 15 min/sample</td><td><input type="radio" name="param21" value="1">1 <input type="radio" name="param21" value="0">0</td></tr>
-      <tr><td>22</td><td>Throughput</td><td>≥ 30 samples/day</td><td>< 30 samples/day</td><td><input type="radio" name="param22" value="1">1 <input type="radio" name="param22" value="0">0</td></tr>
-      <tr><td>23</td><td>Sample preparation steps</td><td>≤ 2 steps</td><td>> 2 steps</td><td><input type="radio" name="param23" value="1">1 <input type="radio" name="param23" value="0">0</td></tr>
-      <tr><td>24</td><td>Derivatization required</td><td>No</td><td>Yes</td><td><input type="radio" name="param24" value="1">1 <input type="radio" name="param24" value="0">0</td></tr>
-      <tr><td>25</td><td>Sample transfer steps</td><td>≤ 2 transfers</td><td>> 2 transfers</td><td><input type="radio" name="param25" value="1">1 <input type="radio" name="param25" value="0">0</td></tr>
-      <tr><td>26</td><td>Use of advanced instrumentation</td><td>Yes</td><td>No</td><td><input type="radio" name="param26" value="1">1 <input type="radio" name="param26" value="0">0</td></tr>
-      <tr><td>27</td><td>In-line or at-line analysis</td><td>Yes</td><td>No</td><td><input type="radio" name="param27" value="1">1 <input type="radio" name="param27" value="0">0</td></tr>
-      <tr><td>28</td><td>Miniaturization of method</td><td>Yes</td><td>No</td><td><input type="radio" name="param28" value="1">1 <input type="radio" name="param28" value="0">0</td></tr>
-      <tr><td>29</td><td>Method portability</td><td>Portable</td><td>Non-portable</td><td><input type="radio" name="param29" value="1">1 <input type="radio" name="param29" value="0">0</td></tr>
-      <tr><td>30</td><td>No. of analytes per run</td><td>≥ 2</td><td>1</td><td><input type="radio" name="param30" value="1">1 <input type="radio" name="param30" value="0">0</td></tr>
-      <tr><td>31–40</td><td colspan="4">(Add remaining parameters 31–40 here using the same format)</td></tr>
-    </tbody>
-  </table>  <!-- Section 3: Operator Safety -->  <h3>3. Operator Safety</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Parameter</th>
-        <th class="green-cell">Score = 1 (Safe)</th>
-        <th class="red-cell">Score = 0 (Unsafe)</th>
-        <th>Your Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>41–60</td><td colspan="4">(Add parameters 41–60 here)</td></tr>
-    </tbody>
-  </table>  <!-- Section 4: Toxicity and Sustainability -->  <h3>4. Toxicity and Instrumental Sustainability</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Parameter</th>
-        <th class="green-cell">Score = 1 (Not Toxic & Sustainable)</th>
-        <th class="red-cell">Score = 0 (Toxic & Not Sustainable)</th>
-        <th>Your Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>61–80</td><td colspan="4">(Add parameters 61–80 here)</td></tr>
-    </tbody>
-  </table>  <!-- Section 5: Economic & Scalability -->  <h3>5. Economic Viability and Scalability</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Parameter</th>
-        <th class="green-cell">Score = 1 (Meets Standards)</th>
-        <th class="red-cell">Score = 0 (Fails Standards)</th>
-        <th>Your Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>81–100</td><td colspan="4">(Add parameters 81–100 here)</td></tr>
-    </tbody>
-  </table>
-</div><div class="right-panel">
-  <div class="result-box">
-    <h3>HEXA Code & Greenness %</h3>
-    <p><strong>HEXA Code:</strong> <span id="hexOutput">--</span></p>
-    <p><strong>Greenness %:</strong> <span id="greenPercent">--%</span></p>
-    <p><strong>Barcode:</strong></p>
-    <svg id="barcode"></svg>
-    <button onclick="calculateGreenness()">Generate HEXA Code</button>
+  <div class="right">
+    <h3>Results</h3>
+    <p><strong>Binary Code:</strong> <span id="binaryCode"></span></p>
+    <p><strong>HEX Code:</strong> <span id="hexCode"></span></p>
+    <p><strong>Greenness %:</strong> <span id="greenness"></span></p>
   </div>
-</div><script src="https://cdn.jsdelivr.net/jsbarcode/3.11.5/JsBarcode.all.min.js"></script><script>
-  function calculateGreenness() {
-    let binary = '';
-    for (let i = 1; i <= 100; i++) {
-      let radios = document.getElementsByName('param' + i);
-      for (let radio of radios) {
-        if (radio.checked) binary += radio.value;
+  <script>
+    const domains = [
+      { title: "1. Environmental Impact", start: 1, end: 20 },
+      { title: "2. Method Efficiency", start: 21, end: 40 },
+      { title: "3. Operator Safety", start: 41, end: 60 },
+      { title: "4. Toxicity & Instrumental Sustainability", start: 61, end: 80 },
+      { title: "5. Economic & Scalability", start: 81, end: 100 }
+    ];
+
+    const descriptions = {
+      1: ["Type of solvent used", "Water or non-toxic green solvents", "Toxic, volatile, or halogenated solvents"],
+      2: ["Volume of solvent used", "≤ 10 mL/sample", "> 10 mL/sample"],
+      3: ["Number of chemicals used", "≤ 3 chemicals", "> 3 chemicals"],
+      4: ["Chemical hazard class of reagents", "GHS category 3 or lower", "GHS category 1 or 2"],
+      5: ["Volatility of solvents", "Non-volatile solvents", "Volatile or flammable solvents"],
+      6: ["Ventilation needs", "No fume hood required", "Fume hood or special exhaust required"],
+      7: ["Waste type generated", "Non-hazardous solid or biodegradable", "Hazardous, persistent, or toxic waste"],
+      8: ["Waste disposal method", "Biodegradable or green disposal", "Incineration or toxic landfilling"],
+      9: ["Waste life span before disposal", "Degradable within 24h", "Persists > 24h untreated"],
+      10: ["Materials renewability", "Renewable, sustainably sourced materials", "Non-renewable or limited-resource materials"],
+      11: ["Biodegradability", "Fully biodegradable materials", "Non-biodegradable or persistent pollutants"],
+      12: ["Energy requirement", "≤ 100 W total energy use", "> 100 W or energy-intensive steps"],
+      13: ["Source of energy", "Renewable energy (e.g., solar)", "Non-renewable energy (e.g., grid coal)"],
+      14: ["GHG emissions", "No greenhouse gas emission", "Significant CO₂ or other GHG emission"],
+      15: ["Need for heating/radiation", "Operates at room temperature", "Requires heating or UV/IR radiation"],
+      16: ["Use of disposable plastics", "No disposable plastics used", "Single-use plastics involved"],
+      17: ["Halogenated/heavy metals", "None used", "One or more halogenated or metal compounds"],
+      18: ["Sample volume required", "≤ 1 mL/sample", "> 1 mL/sample"],
+      19: ["No-metal based catalysts", "Only organic or enzyme‑based catalysts", "Metal-based catalysts (e.g., Pd, Pt) used"],
+      20: ["Waste volume generated", "≤ 5 mL waste per sample", " > 5 mL waste per sample"],
+      21: ["Analysis time", "≤ 15 minutes/sample", "> 15 minutes/sample"],
+      22: ["Throughput", "≥ 30 samples/day", "< 30 samples/day"],
+      23: ["Sample preparation steps", "≤ 2 steps", "> 2 steps"],
+      24: ["Derivatization required", "No", "Yes"],
+      25: ["Sample transfer steps", "≤ 2 transfers", "> 2 transfers"],
+      26: ["Use of advanced instrumentation", "Yes (automated or modern)", "No (manual or outdated)"],
+      27: ["In-line or at-line analysis", "Yes", "No"],
+      28: ["Miniaturization of method", "Yes (micro- or nano- scale)", "No"],
+      29: ["Method portability", "Portable equipment used", "Requires fixed, heavy equipment"],
+      30: ["No. of analytes per run", "≥ 2 analytes simultaneously", "Only one analyte per run"],
+      31: ["Certificate of local materials", "Certified", "Not certified"],
+      32: ["Number of separation and purification steps", "≤ 2 steps", "> 2 steps"],
+      33: ["Simplicity of sample preparation", "Nano/ Micro extraction", "Macro extraction"],
+      34: ["Automation level", "Fully or semi-automated", "Manual"],
+      35: ["Scale of extraction", "Micro-/miniaturized scale", "Macro/large-scale extractions"],
+      36: ["Preservation", "None/chemical or physical", "Physio-chemical"],
+      37: ["No. of intermediate reagents used", "≤ 2 intermediates", "> 2 intermediates"],
+      38: ["Integration of analytical processes", "Fully integrated analytical processes and single instrument", "Separate analytical processes and instruments"],
+      39: ["Type of method (direct/indirect)", "No sample preparation needed/ simple procedures", "Extraction required"],
+      40: ["Multi-analyte capability", "Yes", "No"]
+    };
+
+    for (let i = 41; i <= 100; i++) {
+      descriptions[i] = ["Parameter " + i, "Green criteria", "Not green"];
+    }
+
+    const container = document.getElementById("parameter-tables");
+
+    domains.forEach(domain => {
+      const section = document.createElement("div");
+      section.innerHTML = `<h3 class='section-title'>${domain.title}</h3>`;
+
+      let html = `<table><thead><tr><th>No.</th><th>Parameter</th><th>Score = 1</th><th>Score = 0</th><th>Your Score</th></tr></thead><tbody>`;
+
+      for (let i = domain.start; i <= domain.end; i++) {
+        const [title, yes, no] = descriptions[i];
+        html += `<tr>
+          <td>${i}</td>
+          <td>${title}</td>
+          <td>${yes}</td>
+          <td>${no}</td>
+          <td>
+            <input type="radio" name="param${i}" value="1"> 1
+            <input type="radio" name="param${i}" value="0"> 0
+          </td>
+        </tr>`;
       }
+
+      html += `</tbody></table>`;
+      section.innerHTML += html;
+      container.appendChild(section);
+    });
+
+    function calculateResults() {
+      let binary = "";
+      for (let i = 1; i <= 100; i++) {
+        const radios = document.getElementsByName("param" + i);
+        let value = "0";
+        for (const r of radios) if (r.checked) value = r.value;
+        binary += value;
+      }
+
+      let hex = "";
+      for (let i = 0; i < 100; i += 4) {
+        const chunk = binary.slice(i, i + 4);
+        hex += parseInt(chunk, 2).toString(16).toUpperCase();
+      }
+
+      const ones = binary.split("1").length - 1;
+      const percent = (ones / 100) * 100;
+
+      document.getElementById("binaryCode").textContent = binary;
+      document.getElementById("hexCode").textContent = hex;
+      document.getElementById("greenness").textContent = percent.toFixed(1) + "%";
     }
-    let hex = '';
-    let ones = 0;
-    for (let i = 0; i < binary.length; i += 4) {
-      let chunk = binary.substr(i, 4);
-      if (chunk.length < 4) chunk = chunk.padEnd(4, '0');
-      ones += [...chunk].filter(v => v === '1').length;
-      hex += parseInt(chunk, 2).toString(16).toUpperCase();
-    }
-    let percent = (ones / 100) * 100;
-    document.getElementById('hexOutput').innerText = hex.padEnd(25, '0');
-    document.getElementById('greenPercent').innerText = percent.toFixed(1) + '%';
-    JsBarcode("#barcode", hex.padEnd(25, '0'));
-  }
-</script></body>
+  </script>
+</body>
 </html>
