@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HEXA Green (100) Evaluation Tool</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    h1 { color: #218c74; }
+    .parameter { margin: 10px 0; }
+    .output { margin-top: 30px; padding: 10px; border: 1px solid #ccc; }
+    button { background-color: #218c74; color: white; padding: 10px; border: none; cursor: pointer; }
+    button:hover { background-color: #2ecc71; }
+  </style>
+</head>
+<body>
+
+<h1>HEXA Green (100) - Evaluation Form</h1>
+
+<form id="hexForm">
+  <div id="inputs"></div>
+  <button type="submit">Generate HEX Code & %Greenness</button>
+</form>
+
+<div class="output" id="result" style="display:none;">
+  <p><strong>HEXA Code:</strong> <span id="hexCode"></span></p>
+  <p><strong>%Greenness:</strong> <span id="greenPercent"></span>%</p>
+</div>
+
+<script>
+  const inputDiv = document.getElementById("inputs");
+  for (let i = 1; i <= 100; i++) {
+    inputDiv.innerHTML += `
+      <div class="parameter">
+        Parameter ${i}:
+        <label><input type="radio" name="param${i}" value="1" required> 1</label>
+        <label><input type="radio" name="param${i}" value="0"> 0</label>
+      </div>
+    `;
+  }
+
+  document.getElementById("hexForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let binary = "";
+    for (let i = 1; i <= 100; i++) {
+      const value = document.querySelector(`input[name="param${i}"]:checked`).value;
+      binary += value;
+    }
+
+    // Convert binary to HEXA
+    let hexCode = "";
+    for (let i = 0; i < 100; i += 4) {
+      let chunk = binary.substring(i, i + 4);
+      hexCode += parseInt(chunk, 2).toString(16).toUpperCase();
+    }
+
+    // Count the number of 1s
+    let ones = binary.split('').filter(c => c === '1').length;
+    let greenness = (ones / 100 * 100).toFixed(1);
+
+    // Display results
+    document.getElementById("hexCode").textContent = hexCode;
+    document.getElementById("greenPercent").textContent = greenness;
+    document.getElementById("result").style.display = "block";
+  });
+</script>
+
+</body>
+</html>
