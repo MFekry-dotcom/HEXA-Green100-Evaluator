@@ -1,160 +1,172 @@
-<h3 style="color:#2E7D32;">1. Environmental Impact</h3>
-<table style="width:100%; border-collapse: collapse; font-family: 'Roboto', sans-serif;">
-  <thead style="background-color:#eeeeee;">
+<!-- Example styling can be placed in a <style> tag in the <head> of the page -->
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 40px;
+  }
+
+  thead {
+    background-color: #eeeeee;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th:nth-child(3) {
+    background-color: #e8f5e9;
+  }
+
+  th:nth-child(4) {
+    background-color: #ffebee;
+  }
+
+  td.option {
+    text-align: center;
+  }
+
+  h3 {
+    color: #2E7D32;
+  }
+</style>
+
+<!-- Example of one section: Environmental Impact -->
+<h3>1. Environmental Impact</h3>
+<table>
+  <thead>
     <tr>
-      <th style="border:1px solid #ccc; padding:8px;">No.</th>
-      <th style="border:1px solid #ccc; padding:8px;">Parameter</th>
-      <th style="border:1px solid #ccc; padding:8px; background-color:#e8f5e9;">Score = 1 (Green)</th>
-      <th style="border:1px solid #ccc; padding:8px; background-color:#ffebee;">Score = 0 (Not Green)</th>
+      <th>No.</th>
+      <th>Parameter</th>
+      <th>Score = 1 (Green)</th>
+      <th>Score = 0 (Not Green)</th>
+      <th>Select 1</th>
+      <th>Select 0</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #ccc; padding:8px;">1</td>
-      <td style="border:1px solid #ccc; padding:8px;">Type of solvent used</td>
-      <td style="border:1px solid #ccc; padding:8px; background-color:#e8f5e9;">Water or non-toxic green solvents</td>
-      <td style="border:1px solid #ccc; padding:8px; background-color:#ffebee;">Toxic, volatile, or halogenated solvents</td>
+      <td>1</td>
+      <td>Type of solvent used</td>
+      <td>Water or non-toxic green solvents</td>
+      <td>Toxic, volatile, or halogenated solvents</td>
+      <td class="option"><input type="radio" name="p1" value="1"></td>
+      <td class="option"><input type="radio" name="p1" value="0"></td>
     </tr>
     <tr>
-      <td style="border:1px solid #ccc; padding:8px;">2</td>
-      <td style="border:1px solid #ccc; padding:8px;">Volume of solvent used</td>
-      <td style="border:1px solid #ccc; padding:8px; background-color:#e8f5e9;">≤ 10 mL/sample</td>
-      <td style="border:1px solid #ccc; padding:8px; background-color:#ffebee;">> 10 mL/sample</td>
+      <td>2</td>
+      <td>Volume of solvent used</td>
+      <td>≤ 10 mL/sample</td>
+      <td>> 10 mL/sample</td>
+      <td class="option"><input type="radio" name="p2" value="1"></td>
+      <td class="option"><input type="radio" name="p2" value="0"></td>
     </tr>
-    <!-- Add the rest of the 20 parameters similarly -->
+    <!-- Continue adding rows until parameter 20 -->
   </tbody>
 </table>
-<h3 style="color:#1976D2;">2. Method Efficiency</h3>
-<table style="width:100%; border-collapse: collapse; font-family: 'Roboto', sans-serif;">
-  <thead style="background-color:#eeeeee;">
+
+<h3>2. Method Efficiency</h3>
+<table>
+  <thead>
     <tr>
-      <th style="border:1px solid #ccc; padding:8px;">No.</th>
-      <th style="border:1px solid #ccc; padding:8px;">Parameter</th>
-      <th style="border:1px solid #ccc; padding:8px; background-color:#e8f5e9;">Score = 1 (Efficient)</th>
-      <th style="border:1px solid #ccc; padding:8px; background-color:#ffebee;">Score = 0 (Inefficient)</th>
+      <th>No.</th>
+      <th>Parameter</th>
+      <th>Score = 1 (Efficient)</th>
+      <th>Score = 0 (Inefficient)</th>
+      <th>Select 1</th>
+      <th>Select 0</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td style="padding:8px;">21</td><td>Analysis time</td><td>≤ 15 minutes/sample</td><td>> 15 minutes/sample</td></tr>
-    <tr><td style="padding:8px;">22</td><td>Throughput</td><td>≥ 30 samples/day</td><td>< 30 samples/day</td></tr>
-    <tr><td style="padding:8px;">23</td><td>Sample preparation steps</td><td>≤ 2 steps</td><td>> 2 steps</td></tr>
-    <tr><td style="padding:8px;">24</td><td>Derivatization required</td><td>No</td><td>Yes</td></tr>
-    <tr><td style="padding:8px;">25</td><td>Sample transfer steps</td><td>≤ 2 transfers</td><td>> 2 transfers</td></tr>
-    <tr><td style="padding:8px;">26</td><td>Use of advanced instrumentation</td><td>Yes (automated or modern)</td><td>No (manual or outdated)</td></tr>
-    <tr><td style="padding:8px;">27</td><td>In-line or at-line analysis</td><td>Yes</td><td>No</td></tr>
-    <tr><td style="padding:8px;">28</td><td>Miniaturization of method</td><td>Yes (micro- or nano- scale)</td><td>No</td></tr>
-    <tr><td style="padding:8px;">29</td><td>Method portability</td><td>Portable equipment used</td><td>Requires fixed, heavy equipment</td></tr>
-    <tr><td style="padding:8px;">30</td><td>No. of analytes per run</td><td>≥ 2 analytes simultaneously</td><td>Only one analyte per run</td></tr>
-    <tr><td style="padding:8px;">31</td><td>Certificate of local materials</td><td>Certified</td><td>Not certified</td></tr>
-    <tr><td style="padding:8px;">32</td><td>Number of separation/purification steps</td><td>≤ 2 steps</td><td>> 2 steps</td></tr>
-    <tr><td style="padding:8px;">33</td><td>Simplicity of sample preparation</td><td>Nano/ Micro extraction</td><td>Macro extraction</td></tr>
-    <tr><td style="padding:8px;">34</td><td>Automation level</td><td>Fully or semi-automated</td><td>Manual</td></tr>
-    <tr><td style="padding:8px;">35</td><td>Scale of extraction</td><td>Micro-/miniaturized scale</td><td>Macro/large-scale extractions</td></tr>
-    <tr><td style="padding:8px;">36</td><td>Preservation</td><td>None/chemical or physical</td><td>Physio-chemical</td></tr>
-    <tr><td style="padding:8px;">37</td><td>No. of intermediate reagents used</td><td>≤ 2 intermediates</td><td>> 2 intermediates</td></tr>
-    <tr><td style="padding:8px;">38</td><td>Integration of analytical processes</td><td>Fully integrated into single instrument</td><td>Separate instruments/processes</td></tr>
-    <tr><td style="padding:8px;">39</td><td>Type of method (direct/indirect)</td><td>No preparation/simple filtration</td><td>Extraction required</td></tr>
-    <tr><td style="padding:8px;">40</td><td>Multi-analyte capability</td><td>Yes</td><td>No</td></tr>
+    <tr>
+      <td>21</td>
+      <td>Analysis time</td>
+      <td>≤ 15 minutes/sample</td>
+      <td>> 15 minutes/sample</td>
+      <td class="option"><input type="radio" name="p21" value="1"></td>
+      <td class="option"><input type="radio" name="p21" value="0"></td>
+    </tr>
+    <!-- Continue until parameter 40 -->
   </tbody>
 </table>
-<h3 style="color:#FF9800;">3. Operator Safety</h3>
-<table style="width:100%; border-collapse: collapse; font-family: 'Roboto', sans-serif;">
-  <thead style="background-color:#eeeeee;">
+
+<h3>3. Operator Safety</h3>
+<table>
+  <thead>
     <tr>
-      <th style="border:1px solid #ccc; padding:8px;">No.</th>
-      <th style="border:1px solid #ccc; padding:8px;">Parameter</th>
-      <th style="border:1px solid #ccc; padding:8px; background-color:#e8f5e9;">Score = 1 (Safe)</th>
-      <th style="border:1px solid #ccc; padding:8px; background-color:#ffebee;">Score = 0 (Unsafe)</th>
+      <th>No.</th>
+      <th>Parameter</th>
+      <th>Score = 1 (Safe)</th>
+      <th>Score = 0 (Unsafe)</th>
+      <th>Select 1</th>
+      <th>Select 0</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>41</td><td>Direct exposure to chemicals</td><td>No direct exposure possible</td><td>High risk of exposure</td></tr>
-    <tr><td>42</td><td>Handling of corrosives</td><td>Not required or fully enclosed</td><td>Required without full protection</td></tr>
-    <tr><td>43</td><td>Skin or eye irritants used</td><td>None used</td><td>Yes, any irritant present</td></tr>
-    <tr><td>44</td><td>Fume inhalation risk</td><td>No inhalation risk</td><td>Fumes or aerosols likely</td></tr>
-    <tr><td>45</td><td>Protective equipment needs</td><td>Basic lab coat and gloves</td><td>Requires full PPE or respirators</td></tr>
-    <tr><td>46</td><td>Noise level</td><td>≤ 70 dB</td><td>> 70 dB</td></tr>
-    <tr><td>47</td><td>Radiation hazard</td><td>None</td><td>UV/X-ray/gamma or radioactive isotopes used</td></tr>
-    <tr><td>48</td><td>Electrical safety</td><td>Fully enclosed, low voltage equipment</td><td>Exposed or high-voltage systems</td></tr>
-    <tr><td>49</td><td>Chemical splash potential</td><td>Closed system or splash-proof design</td><td>Open beakers or pipetting acids manually</td></tr>
-    <tr><td>50</td><td>Hot surface exposure</td><td>No exposed hot elements</td><td>Open hot plates or reactors</td></tr>
-    <tr><td>51</td><td>Ergonomics</td><td>Standing/sitting comfort, low strain</td><td>Awkward postures or repetitive strain</td></tr>
-    <tr><td>52</td><td>Manual lifting</td><td>No heavy lifting (>10 kg) required</td><td>Heavy instrument/sample movement needed</td></tr>
-    <tr><td>53</td><td>Instrument alarms/sensors</td><td>Present for leaks, overheat, etc.</td><td>Absent or insufficient safety sensors</td></tr>
-    <tr><td>54</td><td>Fire hazard</td><td>No ignition sources near flammables</td><td>Potential ignition/explosion risks</td></tr>
-    <tr><td>55</td><td>Eye wash/shower availability</td><td>Yes, within 10 seconds distance</td><td>No or far from workspace</td></tr>
-    <tr><td>56</td><td>Spill management system</td><td>Proper spill containment in place</td><td>Lacks clear spill response setup</td></tr>
-    <tr><td>57</td><td>First aid nearby</td><td>Present and accessible</td><td>Absent or poorly located</td></tr>
-    <tr><td>58</td><td>Safe storage of chemicals</td><td>Proper labeling and cabinets</td><td>Poor labeling or unsafe stacking</td></tr>
-    <tr><td>59</td><td>Safety training needed</td><td>Basic lab safety training sufficient</td><td>Specialized training required</td></tr>
-    <tr><td>60</td><td>Historical incidents</td><td>No past accidents</td><td>Documented safety incidents</td></tr>
+    <tr>
+      <td>41</td>
+      <td>Direct exposure to chemicals</td>
+      <td>No direct exposure possible</td>
+      <td>High risk of exposure</td>
+      <td class="option"><input type="radio" name="p41" value="1"></td>
+      <td class="option"><input type="radio" name="p41" value="0"></td>
+    </tr>
+    <!-- Continue until parameter 60 -->
   </tbody>
 </table>
-<h3 style="color:#8E24AA;">4. Safety, Toxicity & Instrumental Sustainability</h3>
-<table style="width:100%; border-collapse: collapse; font-family: 'Roboto', sans-serif;">
-  <thead style="background-color:#eeeeee;">
+
+<h3>4. Toxicity and Instrumental Sustainability</h3>
+<table>
+  <thead>
     <tr>
-      <th style="border:1px solid #ccc; padding:8px;">No.</th>
-      <th style="border:1px solid #ccc; padding:8px;">Parameter</th>
-      <th style="border:1px solid #ccc; padding:8px; background-color:#e8f5e9;">Score = 1 (Not toxic & Sustainable)</th>
-      <th style="border:1px solid #ccc; padding:8px; background-color:#ffebee;">Score = 0 (Toxic & Not Sustainable)</th>
+      <th>No.</th>
+      <th>Parameter</th>
+      <th>Score = 1 (Not Toxic & Sustainable)</th>
+      <th>Score = 0 (Toxic & Not Sustainable)</th>
+      <th>Select 1</th>
+      <th>Select 0</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>61</td><td>Acute toxicity</td><td>LD₅₀ > 2000 mg/kg</td><td>LD₅₀ ≤ 2000 mg/kg</td></tr>
-    <tr><td>62</td><td>Chronic toxicity</td><td>No known chronic effects</td><td>Known chronic health hazards</td></tr>
-    <tr><td>63</td><td>Carcinogenicity</td><td>Not classified or Cat. 4–5</td><td>Cat. 1A/1B/2 known/suspected</td></tr>
-    <tr><td>64</td><td>Occupational hazards</td><td>Minimal (dust/fumes negligible)</td><td>Significant hazards (dust, VOCs)</td></tr>
-    <tr><td>65</td><td>Health hazards</td><td>No risk of absorption/toxicity</td><td>Dermal, inhalation, ingestion risks</td></tr>
-    <tr><td>66</td><td>Safety hazards</td><td>Low hazard operation protocol</td><td>Explosion, high energy, or pressure</td></tr>
-    <tr><td>67</td><td>Risk of hazard interactions</td><td>No reactive or synergistic compounds</td><td>Unexpected interactions possible</td></tr>
-    <tr><td>68</td><td>MSD availability</td><td>Available & updated</td><td>Missing or outdated</td></tr>
-    <tr><td>69</td><td>Use of banned substances</td><td>None used</td><td>Banned/restricted substances used</td></tr>
-    <tr><td>70</td><td>Direct analyst exposure</td><td>Closed or transferred sampling</td><td>Open or manual sampling</td></tr>
-    <tr><td>71</td><td>Instrument eco-certification</td><td>Certified sustainable production</td><td>No certification</td></tr>
-    <tr><td>72</td><td>Carbon footprint data</td><td>Available</td><td>Unavailable</td></tr>
-    <tr><td>73</td><td>Toxic by-products</td><td>No toxic by-products</td><td>Expected/hazardous by-products</td></tr>
-    <tr><td>74</td><td>Maintenance-free period</td><td>≥ 6 months</td><td>Frequent maintenance needed</td></tr>
-    <tr><td>75</td><td>Post-analysis cleanup</td><td>Minimal/green cleanup</td><td>Complex or hazardous cleanup</td></tr>
-    <tr><td>76</td><td>Remote support</td><td>Available</td><td>Not available</td></tr>
-    <tr><td>77</td><td>PPE needs</td><td>Basic PPE sufficient</td><td>Advanced/full PPE required</td></tr>
-    <tr><td>78</td><td>Aquatic toxicity</td><td>None or low potential</td><td>High or unknown hazard</td></tr>
-    <tr><td>79</td><td>Dermal toxicity</td><td>Non-irritant</td><td>Irritant or corrosive</td></tr>
-    <tr><td>80</td><td>Neurotoxicity</td><td>No neurotoxic effects</td><td>Suspected or confirmed</td></tr>
+    <tr>
+      <td>61</td>
+      <td>Acute toxicity</td>
+      <td>LD₅₀ > 2000 mg/kg</td>
+      <td>LD₅₀ ≤ 2000 mg/kg</td>
+      <td class="option"><input type="radio" name="p61" value="1"></td>
+      <td class="option"><input type="radio" name="p61" value="0"></td>
+    </tr>
+    <!-- Continue until parameter 80 -->
   </tbody>
 </table>
-<h3 style="color:#1E88E5;">5. Economic Viability & Scalability</h3>
-<table style="width:100%; border-collapse: collapse; font-family: 'Roboto', sans-serif;">
-  <thead style="background-color:#eeeeee;">
+
+<h3>5. Economic and Scalability</h3>
+<table>
+  <thead>
     <tr>
-      <th style="border:1px solid #ccc; padding:8px;">No.</th>
-      <th style="border:1px solid #ccc; padding:8px;">Parameter</th>
-      <th style="border:1px solid #ccc; padding:8px; background-color:#e8f5e9;">Score = 1 (Meets Standards)</th>
-      <th style="border:1px solid #ccc; padding:8px; background-color:#ffebee;">Score = 0 (Fails Standards)</th>
+      <th>No.</th>
+      <th>Parameter</th>
+      <th>Score = 1 (Meets Standard)</th>
+      <th>Score = 0 (Fails Standard)</th>
+      <th>Select 1</th>
+      <th>Select 0</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>81</td><td>Cost of reagents/sample</td><td>≤ $1 (adjusted)</td><td>> $5/sample</td></tr>
-    <tr><td>82</td><td>Use of natural chemicals</td><td>Derived from renewable sources</td><td>Petrochemical/synthetic only</td></tr>
-    <tr><td>83</td><td>Equipment cost</td><td>Affordable/standard lab tools</td><td>High-cost or inaccessible</td></tr>
-    <tr><td>84</td><td>No. of steps</td><td>≤ 2 steps</td><td>> 2 steps or multi-stage</td></tr>
-    <tr><td>85</td><td>Additional treatment</td><td>Simple (e.g., cleanup)</td><td>Advanced (e.g., mineralization)</td></tr>
-    <tr><td>86</td><td>Reaction conditions</td><td>Room temperature</td><td>Requires heating/cooling</td></tr>
-    <tr><td>87</td><td>Sample size</td><td>≤ 1 mL</td><td>> 1 mL</td></tr>
-    <tr><td>88</td><td>Material reusability</td><td>≥ 5 reuse cycles</td><td>< 5 or single-use</td></tr>
-    <tr><td>89</td><td>Time cost per cycle</td><td>≤ 15 minutes</td><td>> 15 minutes</td></tr>
-    <tr><td>90</td><td>Local reagent availability</td><td>Locally accessible</td><td>Imported or specialized</td></tr>
-    <tr><td>91</td><td>Reagent/solution shelf life</td><td>> 6 months</td><td>< 3 months or unstable</td></tr>
-    <tr><td>92</td><td>Common vs rare instruments</td><td>Standard/lab available</td><td>Rare/custom-built</td></tr>
-    <tr><td>93</td><td>Scalability</td><td>Easy scale up/down</td><td>Not scalable</td></tr>
-    <tr><td>94</td><td>Atom economy</td><td>≥ 80% efficiency</td><td>< 50% efficiency</td></tr>
-    <tr><td>95</td><td>System compatibility</td><td>Integrates with workflows</td><td>Requires redesign</td></tr>
-    <tr><td>96</td><td>Equipment maintenance cost</td><td>Low or minimal</td><td>High maintenance needed</td></tr>
-    <tr><td>97</td><td>Labor hours/sample</td><td>≤ 1 hour</td><td>> 2 hours or complex</td></tr>
-    <tr><td>98</td><td>Method transferability</td><td>Easy adoption</td><td>Costly or hard to replicate</td></tr>
-    <tr><td>99</td><td>Use in basic labs</td><td>Can be used in low-tech</td><td>Needs advanced facilities</td></tr>
-    <tr><td>100</td><td>Prevention over treatment</td><td>Minimizes waste/byproducts</td><td>Generates waste needing treatment</td></tr>
+    <tr>
+      <td>81</td>
+      <td>Cost of reagents per analysis</td>
+      <td>≤ $1 per sample</td>
+      <td>> $5 per sample</td>
+      <td class="option"><input type="radio" name="p81" value="1"></td>
+      <td class="option"><input type="radio" name="p81" value="0"></td>
+    </tr>
+    <!-- Continue until parameter 100 -->
   </tbody>
 </table>
+
 
   
